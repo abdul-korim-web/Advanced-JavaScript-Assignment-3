@@ -20,12 +20,12 @@ function getListStructure(text){
     <li class="flex justify-between mt-5 bg-white py-3 px-3 rounded-xl items-center w-full     ">
             <div class="itemspandinput">
                 <p class="text-x md:text-3xl todoTilel  ">${text}</p>
-                <input type="text" class=" todoTilelChenge inputStyle border md:text-3xl w-[150px] md:w-[250px] hidden "">
+                <input type="text" class=" todoTilelChengeinput  bg-[#8B5EC6] inputStyle border md:text-3xl w-[150px] md:w-[250px] hidden "">
             </div>
             <div class="btndiv">
-                <button class="checkbtn btnStyle"><i class="fa-solid fa-check"></i></button>
-                <button  class="editbtn btnStyle"><i class="fa-solid fa-pen-to-square"></i></button>
-                <button  class="deletebtn btnStyle"><i class="fa-solid fa-trash"></i></button>
+                <button class="checkbtn btnStyle bg-[#28A745]"><i class="fa-solid fa-check md:text-3xl  "></i></button>
+                <button  class="editbtn btnStyle bg-[#EBD316]"><i class="fa-solid fa-pen-to-square md:text-3xl"></i></button>
+                <button  class="deletebtn btnStyle bg-[#DC3545]"><i class="fa-solid fa-trash md:text-3xl"></i></button>
             </div>
 
     </li>
@@ -73,6 +73,8 @@ ol.addEventListener(`click`,(e)=>{
     let checkbtn = e.target.closest(`.checkbtn`)
     let li= e.target.closest(`li`)
     let p = li.querySelector(`p`)
+    let deletebtn = li.querySelector(`.deletebtn`)
+    let editbtn = li.querySelector(`.editbtn`)
     if (checkbtn){
         let iconChange = checkbtn.querySelector(`i`) 
 
@@ -80,15 +82,50 @@ ol.addEventListener(`click`,(e)=>{
         iconChange.classList.toggle('fa-arrows-rotate');
         if (p.style.textDecoration == `line-through`){
             p.style.textDecoration = `none`
+            deletebtn.classList.remove(`hidden`)
+            editbtn.classList.remove(`hidden`)
         } else {
             p.style.textDecoration = `line-through`
+            deletebtn.classList.add(`hidden`)
+            editbtn.classList.add(`hidden`)
         }
 
 
 
     }
 })
+//edit todolist
 
+ol.addEventListener(`click`,(e)=>{
+    let editbtn = e.target.closest(`.editbtn`)
+    let li = e.target.closest(`li`)
+    let input = li.querySelector(`.todoTilelChengeinput`)
+    let p = li.querySelector(`p`)
+    let iconChange = editbtn.querySelector(`i`)
+    let deletebtn = li.querySelector(`.deletebtn`)
+    let checkbtn = li.querySelector(`.checkbtn`)
+
+    if (editbtn){
+        iconChange.classList.toggle('fa-floppy-disk');
+        
+        // update todo item
+        if(input.classList.contains(`hidden`)){
+            input.value = p.textContent
+            input.classList.remove(`hidden`)
+            p.classList.add(`hidden`)
+            deletebtn.classList.add(`hidden`)
+            checkbtn.classList.add(`hidden`)
+            
+            
+        } else{
+            p.textContent= input.value
+            p.classList.remove(`hidden`)
+            input.classList.add(`hidden`)
+            deletebtn.classList.remove(`hidden`)
+            checkbtn.classList.remove(`hidden`)
+        }
+    }
+})
 
 
 
