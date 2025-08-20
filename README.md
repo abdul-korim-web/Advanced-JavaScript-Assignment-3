@@ -42,3 +42,9 @@ This project is part of my assignment and demonstrates the ability to **add, edi
 ┗ 📜 README.md <br>
 
 ## 📸 Screenshot
+
+
+## 🚀👤 Author
+👉 GitHub: [abdul-korim-web](https://github.com/abdul-korim-web) <br>
+👉 Facebook: [abdul-korim-web](https://www.facebook.com/abdulkorimweb) <br>
+👉 LinkedIn: [abdul-korim-web](https://www.linkedin.com/in/abdul-korim-web/) <br>
