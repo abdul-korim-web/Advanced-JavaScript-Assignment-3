@@ -1,0 +1,7 @@
+@import "tailwindcss";
+.btnStyle{
+    @apply bg-[#8B5EC6] py-2 px-4 cursor-pointer hover:bg-[#6418c7] text-white
+}
+.inputStyle{
+    @apply bg-white px-5 py-2 rounded focus:outline-[#8B5EC6]
+}
