@@ -4,6 +4,9 @@ A simple and interactive **To-Do List** application built using **HTML**, **Tail
 This project is part of my assignment and demonstrates the ability to **add, edit, complete, and delete tasks** dynamically.
 
 ---
+## 🌐 Live Demo
+
+👉 [https://abdul-todo-list.netlify.app/?](https://abdul-todo-list.netlify.app/?)
 
 ## ✨ Features
 
@@ -42,7 +45,6 @@ This project is part of my assignment and demonstrates the ability to **add, edi
 ┗ 📜 README.md <br>
 
 ## 📸 Screenshot
-## Website Demo
 
 **Desktop View:**
 
