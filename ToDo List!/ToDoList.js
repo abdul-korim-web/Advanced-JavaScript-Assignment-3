@@ -68,6 +68,27 @@ ol.addEventListener(`click`,(e)=>{
     
 })
 
+//when click change button icon and line Through 
+ol.addEventListener(`click`,(e)=>{
+    let checkbtn = e.target.closest(`.checkbtn`)
+    let li= e.target.closest(`li`)
+    let p = li.querySelector(`p`)
+    if (checkbtn){
+        let iconChange = checkbtn.querySelector(`i`) 
+
+        
+        iconChange.classList.toggle('fa-arrows-rotate');
+        if (p.style.textDecoration == `line-through`){
+            p.style.textDecoration = `none`
+        } else {
+            p.style.textDecoration = `line-through`
+        }
+
+
+
+    }
+})
+
 
 
 
