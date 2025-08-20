@@ -42,6 +42,12 @@ This project is part of my assignment and demonstrates the ability to **add, edi
 ┗ 📜 README.md <br>
 
 ## 📸 Screenshot
+## Website Demo
+
+**Desktop View:**
+
+![Desktop View](./img/abdul-bmi-calculator.netlify.app_.png)
+
 
 
 ## 🚀👤 Author
